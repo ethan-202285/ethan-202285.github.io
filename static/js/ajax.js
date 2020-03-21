@@ -16,7 +16,7 @@ $(document).ready(function() {
 			$.ajax({
 				type:"post",
 //				url:"http://192.168.1.140:8080/jingtian/demand/save",
-				url:"https://www.jingtian.pro:8088/jingtian/demand/save",
+				url:"https://jingtian.pro/demand/save",
 				dataType: "JSON",
 				data:{
 					companyName: companyName,
