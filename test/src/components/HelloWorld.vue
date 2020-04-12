@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <div v-if="!login">
-      <a href="https://sso.tianwei.pro/user/login?redirect=https://jingtian.pro">登陆</a>
+      <a href="https://sso.tianwei.pro/user/login?redirect=https%3A%2F%2Fjingtian.pro">登陆</a>
     </div>
     <div v-if="login">
       欢迎回来！您登录的账号为: {{ res.user_info.email }}
