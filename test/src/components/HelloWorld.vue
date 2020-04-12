@@ -25,6 +25,7 @@ export default {
     this.$axios
       .get('https://sso.tianwei.pro/api/sam/v1/user/info')
       .then(response => {
+        this.login = true
         this.res = response.data
       }).catch(error => {
         if (error.response.status === 401) {
