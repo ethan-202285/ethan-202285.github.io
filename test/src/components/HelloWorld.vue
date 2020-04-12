@@ -4,7 +4,7 @@
       <a href="https://sso.tianwei.pro/user/login?redirect=https://jingtian.pro">登陆</a>
     </div>
     <div v-if="login">
-      欢迎回来！您登录的账号为: {{ res.email }}
+      欢迎回来！您登录的账号为: {{ res.user_info.email }}
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
     this.$axios
       .get('https://sso.tianwei.pro/api/sam/v1/user/info')
       .then(response => {
-        this.res = response
+        this.res = response.data
       }).catch(error => {
         if (error.response.status === 401) {
           this.login = false;
