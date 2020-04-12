@@ -18,7 +18,9 @@ export default {
   data() {
     return {
       login: false,
-      res: {}
+      res: {
+        user_info: {}
+      }
     }
   },
   mounted() {
@@ -26,7 +28,7 @@ export default {
       .get('https://sso.tianwei.pro/api/sam/v1/user/info')
       .then(response => {
         this.login = true
-        this.res = response.data
+        this.res = response.data.data
       }).catch(error => {
         if (error.response.status === 401) {
           this.login = false;
